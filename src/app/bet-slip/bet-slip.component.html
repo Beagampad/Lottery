@@ -1,7 +1,20 @@
-<button mat-button (click)="getNumber()">Start Game</button>
-
-<ul>
-  <li *ngFor="let usernumber of usernumbers">
-    {{usernumber}}
-  </li>
-</ul>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<div>
+  <ul>
+    <li *ngFor="let usernumber of usernumbers">
+      {{usernumber}}
+    </li>
+  </ul>
+</div>
+<form [formGroup]="angForm" id="form" enctype="multipart/form-data">
+  <div class="form-group">
+    <label formControlName="xbet" #xbet>{{usernumbers.length}}X</label>
+    <input type="text" class="form-control"  formControlName="bet" #bet>
+    <button id="okbtn" type="submit" (click)="CalcBet(usernumbers.length,bet.value)" >OK</button>
+  </div>
+</form>
+<button id="startbtn" mat-button (click)="getNumber()">Place Bet</button>
+<p>Result: {{number}}</p>
+<p id="lost">{{lost}}</p>
+<p id="win">{{win}}</p>
+<p>Total: {{money}} Euros</p>

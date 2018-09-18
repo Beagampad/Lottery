@@ -1,0 +1,10 @@
+button{
+    padding: 7px;
+    margin: 5px;
+    background-color: #ffc10787;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+form{
+    margin-bottom: 30px;
+}

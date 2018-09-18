@@ -11,14 +11,12 @@ export class BallSelectorComponent implements OnInit {
 
   numbers: number[] = [];
   angForm: FormGroup;
-  toppings = new FormControl();
-  toppingList: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   constructor(private lotteryService: LotteryService) {this.createForm(); }
 
   ngOnInit() {
   }
-
+// Insert Number in Array
   insertNumber(value): void {
     console.log('insertNumber', value);
     this.lotteryService.insertNumber(value)
@@ -26,7 +24,6 @@ export class BallSelectorComponent implements OnInit {
   }
 
   createForm() {
-
     this.angForm = new FormGroup({
       btn: new FormControl()
    });

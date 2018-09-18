@@ -1,0 +1,43 @@
+ul{
+    list-style-type: none;
+    position: absolute;
+}
+li{
+    float: left;
+    margin: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: white;
+    border-radius: 5px;
+}
+#startbtn{
+    margin-top: 20px;
+    margin-left: 90%;
+}
+form{
+    margin-left: 200px;
+    float: right;
+    margin-top: 35px;
+}
+label{
+    background-color: grey;
+    padding: 5px;
+    border-radius: 2px;
+}
+input{
+    padding: 5px;
+}
+#okbtn{
+    padding: 5px;
+}
+p{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+}
+#lost{
+    color: red;
+}
+#win{
+    color: green;
+}

@@ -11,29 +11,29 @@ export class LotteryService {
   numbers: number[] = [];
   constructor() { }
 
+  // Get random number
   getNumber(): Observable<number> {
-
-    console.log('hola2');
 
     const range = this.uplim - this.lowlim;
     const result = Math.floor(Math.random()*range) + this.lowlim;
-    console.log(result);
     return  of(result);
   }
-
+// insert number in array
   insertNumber(value: number): Observable<any> {
 
-    // const numbers: number[] = 'Widget ' + this.numbers.length;
     if (this.numbers.length < 8) {
-
       this.numbers.push(value);
       return of(this.numbers);
     }
-
   }
+  // Get numbers chosen by user
   getUserNumber(): Observable<any> {
 
-    console.log(this.numbers);
      return of(this.numbers);
+  }
+// Bet
+  calcBet(count, bet): Observable<any>{
+   const result = count * bet;
+    return of(result);
   }
 }
